@@ -29,8 +29,22 @@ $(document).ready(function() {
     const number2 = parseInt($("#sub2").val());
     const result = subtract(number1, number2);
     $(".output").text(result);
+  }); 
+
+  $("form#multiply").submit(function(event) {
+    event.preventDefault();
+    const number1 = parseInt($("#multi1").val());
+    const number2 = parseInt($("#multi2").val());
+    const result = multiply(number1, number2);
+    $(".output").text(result);
   });
 
-  
+  $("form#divide").submit(function(event) {
+    event.preventDefault();
+    const number1 = parseInt($("#div1").val());
+    const number2 = parseInt($("#div2").val());
+    const result = divide(number1, number2);
+    $(".output").text(result);
+  });
 
 });
